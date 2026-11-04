@@ -1,0 +1,218 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #10101c;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #191929;
+}
+
+.logo {
+    color: #a78bfa;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-links a:hover {
+    color: #a78bfa;
+}
+
+/* Featured Banner */
+.banner {
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+    padding: 50px;
+    background: linear-gradient(
+        120deg,
+        #30205f,
+        #17172e,
+        #10101c
+    );
+}
+
+.banner-content {
+    max-width: 550px;
+}
+
+.tagline {
+    color: #c4b5fd;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+/* Specific selector wins over the global h1 */
+h1 {
+    color: white;
+    font-size: 30px;
+}
+
+.banner .title {
+    color: #c4b5fd;
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.description {
+    color: #d1d1df;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.play-button {
+    background-color: #8b5cf6;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.play-button:hover {
+    background-color: #6d28d9;
+}
+
+/* Shows Section */
+.shows-section {
+    padding: 35px 50px;
+}
+
+.shows-section h2 {
+    margin-bottom: 25px;
+}
+
+/* Flexbox Cards */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.card {
+    width: 180px;
+    background-color: #202033;
+    padding: 12px;
+    border-radius: 10px;
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Card Hover Effect */
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(139, 92, 246, 0.3);
+}
+
+.poster {
+    height: 220px;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+.poster span {
+    font-size: 40px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.poster-one {
+    background: linear-gradient(135deg, #ec4899, #581c87);
+}
+
+.poster-two {
+    background: linear-gradient(135deg, #f59e0b, #7c2d12);
+}
+
+.poster-three {
+    background: linear-gradient(135deg, #06b6d4, #164e63);
+}
+
+.poster-four {
+    background: linear-gradient(135deg, #6366f1, #1e1b4b);
+}
+
+.poster-five {
+    background: linear-gradient(135deg, #10b981, #064e3b);
+}
+
+.poster-six {
+    background: linear-gradient(135deg, #ef4444, #450a0a);
+}
+
+.card h3 {
+    font-size: 16px;
+    margin-bottom: 7px;
+}
+
+.card p {
+    color: #aaaabd;
+    font-size: 12px;
+}
+
+/* Attribute Selector for New Shows */
+.card[data-new="true"]::before {
+    content: "NEW";
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    background-color: #8b5cf6;
+    color: white;
+    padding: 5px 9px;
+    font-size: 10px;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+/* Responsive Layout */
+@media (max-width: 600px) {
+    .navbar {
+        padding: 20px;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .banner {
+        padding: 30px 20px;
+    }
+
+    .banner .title {
+        font-size: 34px;
+    }
+
+    .shows-section {
+        padding: 25px 20px;
+    }
+
+    .card-container {
+        justify-content: center;
+    }
+}
